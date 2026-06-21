@@ -7,6 +7,7 @@
 ## События
 
 ```
+2026-06-21 | note | rozhkov | решено: Олегу Claude Pro $20/мес (Sonnet); РФ-риск блокировки на проверке |
 2026-06-21 | note | rozhkov | ресёрч Suno API (субагент) → drafts/suno-integration-research |
 2026-06-21 | adr  | rozhkov | ADR 0002 — релиз синглами, не альбомом |
 2026-06-21 | note | rozhkov | захват контекста reboot (intake): пайплайн, трек-лист, стек, стратегия |
