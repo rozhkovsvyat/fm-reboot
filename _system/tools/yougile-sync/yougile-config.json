@@ -1,0 +1,11 @@
+{
+  "_comment": "Доска 'Процесс' компании F&M (проект reboot). Секретов нет — коммитится. Токен — в ~/.claude/yougile-token.",
+  "board_id": "8d17282e-21be-42f1-a07d-0975dca0d01d",
+  "columns": {
+    "todo": "3bfbd034-ad0f-42f5-90bc-7ce5f3e0d0ce",
+    "doing": "980a4e12-9383-4690-bd6c-348921e00f3a",
+    "done": "242f77c5-b0b4-495e-8784-0d7acb8330e0",
+    "hold": "39a73ed0-0cf6-48d7-9a46-9b6cb719ca09"
+  },
+  "default_column": "todo"
+}
