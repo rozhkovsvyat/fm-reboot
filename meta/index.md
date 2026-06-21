@@ -20,7 +20,7 @@
 - [[../rules/task-discipline|task-discipline]] — задачи в YouGile
 
 ## Решения и уроки
-- `decisions/` — ADR (architecture decision records) · [[../decisions/0001-vault-structure|0001 — структура vault'а]]
+- `decisions/` — ADR (architecture decision records) · [[../decisions/0001-vault-structure|0001 — структура vault'а]] · [[../decisions/0002-release-as-singles|0002 — релиз синглами]]
 - `drafts/` — черновики до ADR
 - `mistakes/` — журнал ошибок рассуждения ([[../mistakes/README|README]])
 
