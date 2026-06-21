@@ -2,7 +2,7 @@
 
 - **Имя:** Олег
 - **Handle:** oleg
-- **Роль:** вокалист / исполнитель, автор текстов. Дуэт **F&M** (= FRVCTL & Monroe) с [[rozhkov]].
+- **Роль:** вокалист / исполнитель, автор текстов. Дуэт **F&M** (= FRVCTL & Monroe) с [[team/rozhkov]].
 - **Псевдонимы:** Mark Monroe, Oleg Faraday
 - **Email (git):** — (пока не подключён к vault'у)
 - **Город:** Рязань
@@ -16,5 +16,5 @@
 - **Со-отбор** версий-аранжировок (второй вкусовой фильтр после Свята).
 
 ## Заметки
-- Пока не подключён к vault'у (Obsidian Git). Подключим — добавим git-email в [[_handles]].
-- Контекст проекта и роли — [[../drafts/reboot-context-intake|intake]].
+- Пока не подключён к vault'у (Obsidian Git). Подключим — добавим git-email в [[team/_handles]].
+- Контекст проекта и роли — [[drafts/reboot-context-intake|intake]].

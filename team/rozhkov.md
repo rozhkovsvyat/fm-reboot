@@ -2,7 +2,7 @@
 
 - **Имя:** Святослав Рожков
 - **Handle:** rozhkov
-- **Роль:** музыкальный продюсер; owner проекта reboot. Дуэт **F&M** (= FRVCTL & Monroe) с [[oleg]].
+- **Роль:** музыкальный продюсер; owner проекта reboot. Дуэт **F&M** (= FRVCTL & Monroe) с [[team/oleg]].
 - **Псевдонимы:** FRVCTL, Syberian Beast
 - **Email (git):** rozhkovsvyat@gmail.com
 - **Город:** Сочи
