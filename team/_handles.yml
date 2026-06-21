@@ -10,4 +10,4 @@ handles:
 # Справочник handle → имя (для людей; парсер setup.ps1 читает только секцию handles выше)
 people:
   rozhkov: "Святослав Рожков"
-  oleg: "Олег (Monroe / Faraday)"
+  oleg: "Олег Гоков (Monroe / Faraday)"

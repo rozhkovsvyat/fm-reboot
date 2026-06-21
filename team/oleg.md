@@ -1,6 +1,6 @@
 # oleg
 
-- **Имя:** Олег
+- **Имя:** Олег Гоков
 - **Handle:** oleg
 - **Роль:** вокалист / исполнитель, автор текстов. Дуэт **F&M** (= FRVCTL & Monroe) с [[team/rozhkov]].
 - **Псевдонимы:** Mark Monroe, Oleg Faraday
@@ -24,8 +24,9 @@
 - Конфиг: `ANTHROPIC_BASE_URL=https://api.aitunnel.ru`, `ANTHROPIC_AUTH_TOKEN=<ключ AITunnel>`, `ANTHROPIC_API_KEY=""`. В Anthropic **не логиниться**.
 - Fallback-агрегатор: **ProxyAPI** (тоже нативный Anthropic) — на случай downtime/бана upstream.
 - Запасной клиент: **Cline** (если Claude Code-путь сломается) — но теряются `.claude`-хуки.
-- Модель: **Sonnet 4.6** рутина, **Opus** точечно под сложный ресёрч (pay-per-token → тариф покупать не надо, платим за использование). Цена: AITunnel Opus ~960/4800 ₽ за 1M вх/вых, мин. пополнение 399₽.
-- ⚠️ Профиль использования переменный/тяжёлый (task-offload + ресёрч) → расход **переменный**, ориентир ~$20–60+/мес при активности. Pay-per-token это и закрывает: нет throttle/окон (как у подписки), Opus не «игнорим» — используем точечно. Рычаги цены: модель / лёгкий контекст / prompt-caching (проверить у AITunnel).
+- Модель: **Sonnet 4.6** рутина, **Opus** точечно под сложный ресёрч (pay-per-token → тариф не покупаем). Ставки ₽/1M (подтв. скрином 2026-06-21): Sonnet 4.6 **576/2880** (cache read 57.6), Opus 4.8 **672/3360**, Haiku 4.5 **192/960**. Мин. пополнение 399₽. Подробно — [[drafts/aitunnel-pricing-caching]].
+- Профиль переменный/тяжёлый (task-offload + ресёрч). ✅ **Prompt-caching у AITunnel работает** (cache read −90%; Claude Code шлёт `cache_control` сам) → повторный контекст в 10× дешевле, расход ощутимо ниже наивной оценки; точную цифру мерим на реальном usage. Pay-per-token: нет throttle/окон.
+- 💳 Оплата **МИР / СБП** (Олег в РФ → платит сам; зарубежная/белорусская карта не нужна и AITunnel её не примет).
 - Пошаговый гайд: [[howto/oleg-claude-code-setup]].
 
 **Риски (приемлемы для проекта):** агрегатор видит трафик (музыкальный vault без секретов — ок); single-point-of-failure → держим ProxyAPI; не санкционировано Anthropic, но наработки в Git. Why-not прямой Claude Pro: HIGH RU-риск ([[drafts/claude-ru-access-risk]]).

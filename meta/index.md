@@ -21,7 +21,7 @@
 - [[rules/task-discipline|task-discipline]] — задачи в YouGile
 
 ## Решения и уроки
-- `decisions/` — ADR (architecture decision records) · [[decisions/0001-vault-structure|0001 — структура vault'а]] · [[decisions/0002-release-as-singles|0002 — релиз синглами]] · [[decisions/0003-ru-ai-access|0003 — РФ-доступ к ИИ]] · [[decisions/0004-ship-before-tooling|0004 — сингл прежде инструментов]]
+- `decisions/` — ADR (architecture decision records) · [[decisions/0001-vault-structure|0001 — структура vault'а]] · [[decisions/0002-release-as-singles|0002 — релиз синглами]] · [[decisions/0003-ru-ai-access|0003 — РФ-доступ к ИИ]] · [[decisions/0004-ship-before-tooling|0004 — сингл прежде инструментов]] · [[decisions/0005-keep-claude-hooks|0005 — остаёмся на Claude-хуках]]
 - `drafts/` — черновики до ADR ([[drafts/ai-tooling-feasibility|ai-tooling-feasibility]] · [[drafts/suno-integration-research|suno-integration-research]])
 - `mistakes/` — журнал ошибок рассуждения ([[mistakes/README|README]])
 
