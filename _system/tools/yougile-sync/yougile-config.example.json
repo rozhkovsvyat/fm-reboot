@@ -1,0 +1,10 @@
+{
+  "_comment": "Скопируй в yougile-config.json и заполни id своей доски reboot. Секретов тут нет — можно коммитить. id узнаёшь так: python3 yougile-cli.py boards ; python3 yougile-cli.py columns --board-id <id>",
+  "board_id": "ЗАПОЛНИ_ID_ДОСКИ",
+  "columns": {
+    "todo": "ЗАПОЛНИ_ID_КОЛОНКИ",
+    "doing": "ЗАПОЛНИ_ID_КОЛОНКИ",
+    "done": "ЗАПОЛНИ_ID_КОЛОНКИ"
+  },
+  "default_column": "todo"
+}

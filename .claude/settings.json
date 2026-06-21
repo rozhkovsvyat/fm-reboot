@@ -1,0 +1,97 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": {
+    "allow": [
+      "Edit(**)",
+      "Write(**)",
+      "Read(**)",
+      "Bash(git status:*)",
+      "Bash(git log:*)",
+      "Bash(git diff:*)",
+      "Bash(git show:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git pull:*)",
+      "Bash(git config:*)",
+      "Bash(git fetch:*)",
+      "Bash(ls:*)",
+      "Bash(cat:*)",
+      "Bash(grep:*)",
+      "Bash(rg:*)",
+      "Bash(find:*)",
+      "Bash(echo:*)",
+      "Bash(date:*)",
+      "Bash(touch:*)",
+      "Bash(mkdir:*)",
+      "Bash(pwsh:*)",
+      "Bash(python3:*)",
+      "Bash(gh:*)",
+      "WebSearch",
+      "WebFetch"
+    ]
+  },
+  "additionalDirectories": [
+    "/tmp",
+    "/private/tmp"
+  ],
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "pwsh -NoProfile -ExecutionPolicy Bypass -File _system/tools/setup.ps1",
+            "timeout": 30,
+            "statusMessage": "fm-reboot vault setup..."
+          },
+          {
+            "type": "command",
+            "command": "pwsh -NoProfile -ExecutionPolicy Bypass -File .claude/check-vault-integrity.ps1",
+            "timeout": 15,
+            "statusMessage": "Vault integrity check..."
+          },
+          {
+            "type": "command",
+            "command": "pwsh -NoProfile -ExecutionPolicy Bypass -File .claude/check-vault-bloat.ps1",
+            "timeout": 10,
+            "statusMessage": "Checking vault file sizes..."
+          },
+          {
+            "type": "command",
+            "command": "pwsh -NoProfile -ExecutionPolicy Bypass -File .claude/check-inbox.ps1 -EventName SessionStart",
+            "timeout": 5,
+            "statusMessage": "Checking inbox..."
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          { "type": "command", "command": "pwsh -NoProfile -ExecutionPolicy Bypass -File .claude/check-inbox.ps1 -EventName UserPromptSubmit", "timeout": 5 },
+          { "type": "command", "command": "pwsh -NoProfile -ExecutionPolicy Bypass -File .claude/check-overview-stale.ps1 -EventName UserPromptSubmit", "timeout": 10 },
+          { "type": "command", "command": "pwsh -NoProfile -ExecutionPolicy Bypass -File .claude/check-now-stale.ps1 -EventName UserPromptSubmit", "timeout": 5 },
+          { "type": "command", "command": "pwsh -NoProfile -ExecutionPolicy Bypass -File .claude/check-stale-extended.ps1 -EventName UserPromptSubmit", "timeout": 15 },
+          { "type": "command", "command": "pwsh -NoProfile -ExecutionPolicy Bypass -File .claude/check-broken-wikilinks.ps1 -EventName UserPromptSubmit", "timeout": 10 },
+          { "type": "command", "command": "pwsh -NoProfile -ExecutionPolicy Bypass -File .claude/check-draft-lifecycle.ps1 -EventName UserPromptSubmit", "timeout": 10 },
+          { "type": "command", "command": "pwsh -NoProfile -ExecutionPolicy Bypass -File .claude/check-mistakes-daily-review.ps1 -EventName UserPromptSubmit", "timeout": 10 },
+          { "type": "command", "command": "pwsh -NoProfile -ExecutionPolicy Bypass -File .claude/check-inbox-adequacy-due.ps1 -EventName UserPromptSubmit", "timeout": 5 },
+          { "type": "command", "command": "pwsh -NoProfile -ExecutionPolicy Bypass -File .claude/check-yougile-tasks.ps1 -EventName UserPromptSubmit", "timeout": 15 }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          { "type": "command", "command": "pwsh -NoProfile -ExecutionPolicy Bypass -File .claude/check-vault-discipline.ps1 -EventName Stop", "timeout": 10 },
+          { "type": "command", "command": "pwsh -NoProfile -ExecutionPolicy Bypass -File .claude/check-inbox-on-stop.ps1 -EventName Stop", "timeout": 5 },
+          { "type": "command", "command": "pwsh -NoProfile -ExecutionPolicy Bypass -File .claude/check-vault-consistency.ps1 -EventName Stop", "timeout": 15 },
+          { "type": "command", "command": "pwsh -NoProfile -ExecutionPolicy Bypass -File .claude/check-mistakes-candidate.ps1 -EventName Stop", "timeout": 10 },
+          { "type": "command", "command": "pwsh -NoProfile -ExecutionPolicy Bypass -File .claude/check-verify-gate.ps1 -EventName Stop", "timeout": 10 },
+          { "type": "command", "command": "pwsh -NoProfile -ExecutionPolicy Bypass -File .claude/check-yougile-tasks.ps1 -EventName Stop", "timeout": 15 },
+          { "type": "command", "command": "pwsh -NoProfile -ExecutionPolicy Bypass -File .claude/archive-activity-overflow.ps1 -EventName Stop", "timeout": 10, "statusMessage": "Trimming activity.md overflow..." }
+        ]
+      }
+    ]
+  }
+}

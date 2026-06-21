@@ -1,0 +1,27 @@
+# Секреты и машинно-локальное — НИКОГДА не коммитить
+*-token
+*.key
+*.pem
+.env
+.env.*
+
+# Конфиг YouGile с реальными id (если решишь держать локально; example — в репо)
+# _system/tools/yougile-sync/yougile-config.json
+
+# Логи хуков (генерятся локально)
+.claude/*.log
+.claude/*-hook.log
+_system/tools/**/*.log
+
+# Announced/state файлы хуков (runtime, у каждой машины свои)
+.claude/*-announced.txt
+.claude/yougile-last-state.json
+.claude/inbox-loop-heartbeat
+.claude/vault-link.json
+
+# OS / редактор
+.DS_Store
+.obsidian/workspace*.json
+.obsidian/cache
+*.tmp
+*.tmp.*

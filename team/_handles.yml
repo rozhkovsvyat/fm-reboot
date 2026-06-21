@@ -1,0 +1,12 @@
+# Маппинг git author email → handle. Используется setup.ps1 для авто-выставления kb.author.
+# handle = короткий идентификатор участника (lowercase-латиница).
+#
+# Когда появится второй человек — добавь его строку в секцию handles ниже.
+
+handles:
+  "rozhkovsvyat@gmail.com": rozhkov
+  # "second.person@example.com": <handle>
+
+# Справочник handle → имя (для людей; парсер setup.ps1 читает только секцию handles выше)
+people:
+  rozhkov: "Святослав Рожков"
