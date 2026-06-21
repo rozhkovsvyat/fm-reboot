@@ -21,12 +21,13 @@
 - [[rules/task-discipline|task-discipline]] — задачи в YouGile
 
 ## Решения и уроки
-- `decisions/` — ADR (architecture decision records) · [[decisions/0001-vault-structure|0001 — структура vault'а]] · [[decisions/0002-release-as-singles|0002 — релиз синглами]]
+- `decisions/` — ADR (architecture decision records) · [[decisions/0001-vault-structure|0001 — структура vault'а]] · [[decisions/0002-release-as-singles|0002 — релиз синглами]] · [[decisions/0003-ru-ai-access|0003 — РФ-доступ к ИИ]] · [[decisions/0004-ship-before-tooling|0004 — сингл прежде инструментов]]
 - `drafts/` — черновики до ADR ([[drafts/ai-tooling-feasibility|ai-tooling-feasibility]] · [[drafts/suno-integration-research|suno-integration-research]])
 - `mistakes/` — журнал ошибок рассуждения ([[mistakes/README|README]])
 
 ## Команда
 - `team/<handle>.md` — профили ([[team/rozhkov|rozhkov]] · [[team/oleg|oleg]]) · [[team/_handles|_handles.yml]] — identity-маппинг
+- `howto/` — инструкции ([[howto/oleg-claude-code-setup|подключение Олега (Claude Code + AITunnel)]])
 - `inbox/<handle>.md` — личные сообщения
 
 ## Автоматика
