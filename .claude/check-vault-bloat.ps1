@@ -1,4 +1,4 @@
-# check-vault-bloat.ps1 - SessionStart MAX-size guard.
+﻿# check-vault-bloat.ps1 - SessionStart MAX-size guard.
 # Counterpart to check-vault-file-sizes.ps1 (which guards MIN size / data loss).
 # Emits a BLOAT: reminder when append-only files exceed their token budget,
 # so monoliths (inbox/broker/now/activity) get noticed before they reach ~1MB.

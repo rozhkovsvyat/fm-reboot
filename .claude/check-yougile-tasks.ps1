@@ -1,4 +1,4 @@
-# Хук слежения за задачами YouGile (замена корпоративного check-repka-tasks).
+﻿# Хук слежения за задачами YouGile (замена корпоративного check-repka-tasks).
 # SessionStart  → полная сводка открытых задач.
 # UserPromptSubmit/Stop → дельта (новые / закрытые) vs .claude/yougile-last-state.json.
 #

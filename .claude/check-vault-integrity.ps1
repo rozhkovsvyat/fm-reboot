@@ -1,4 +1,4 @@
-#!/usr/bin/env pwsh
+﻿#!/usr/bin/env pwsh
 # SessionStart hook: лёгкий smoke-тест целостности vault'а (LLM-free).
 # Ловит грубые аварии: кто-то/что-то занулил core-файл vault'а, или сломал XML диаграммы.
 # Семантику (битые wikilinks, расхождения now.md ↔ ADR) ловят отдельные хуки
