@@ -5,8 +5,9 @@
 
 handles:
   "rozhkovsvyat@gmail.com": rozhkov
-  # "second.person@example.com": <handle>
+  # "<oleg-git-email>": oleg   # добавить, когда Олег подключится к vault'у
 
 # Справочник handle → имя (для людей; парсер setup.ps1 читает только секцию handles выше)
 people:
   rozhkov: "Святослав Рожков"
+  oleg: "Олег (Monroe / Faraday)"
