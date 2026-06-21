@@ -9,7 +9,7 @@
 **reboot** — музыкальный проект: возвращение в музыку дуэта **F&M** (= FRVCTL & Monroe) после паузы,
 с опорой на AI. Двое:
 - **Свят** ([[team/rozhkov|rozhkov]]) — продюсер, бывш. FRVCTL / Syberian Beast (Сочи).
-- **Олег** ([[team/oleg|oleg]]) — вокалист/автор, бывш. Mark Monroe / Oleg Faraday (Рязань).
+- **Олег Гоков** ([[team/oleg|oleg]]) — вокалист/автор, бывш. Mark Monroe / Oleg Faraday (Рязань).
 
 Работают удалённо, в Suno на созвонах. Историческая боль — перфекционизм и недоведение (много демок,
 мало релизов); reboot целится **довести треки до релиза**. Публичное имя — TBD (кандидат «Вечер ни с кем»).
@@ -35,9 +35,10 @@
 ## Решения и направления
 
 - [[decisions/0002-release-as-singles|ADR 0002]] — **релиз синглами**, не альбомом (против перфекционизма).
+- [[decisions/0004-ship-before-tooling|ADR 0004]] — **выпустить сингл прежде** построения инструментов.
+- [[decisions/0003-ru-ai-access|ADR 0003]] + [[decisions/0005-keep-claude-hooks|ADR 0005]] — доступ к ИИ для участников из РФ: **Claude Code через РФ-агрегатор AITunnel** (нативный Anthropic → `.claude`-хуки и MCP сохраняются, оплата ₽ МИР/СБП, без аккаунта Anthropic). Остаёмся на Claude-хуках, полный агностик-ребилд отложен. Прямой Claude Pro из РФ — HIGH-риск ([[drafts/claude-ru-access-risk]]). Онбординг Олега — [[howto/oleg-claude-code-setup]].
 - Маршрут: довести → сведение → **портфолио** → продюсерский центр / лейбл. Дедлайна нет.
-- R&D (не на критическом пути): AI-инструмент сведения (Reaper-движок поверх стемов) и интеграция с Suno
-  (AceData SunoMCP) — [[drafts/ai-tooling-feasibility]], [[drafts/suno-integration-research]].
+- R&D (отложено, не на критическом пути): AI-инструмент сведения (Reaper поверх стемов) + интеграция с Suno (AceData SunoMCP) — [[drafts/ai-tooling-feasibility]], [[drafts/suno-integration-research]], [[drafts/acedata-pricing-research]], [[drafts/aitunnel-pricing-caching]]. Предложение по движку — [[drafts/adr-generation-engine]].
 
 ## Текущий этап
 

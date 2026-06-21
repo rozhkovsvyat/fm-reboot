@@ -42,6 +42,22 @@ ANTHROPIC_API_KEY=""        # обязательно пустой
 - Оплата Олегом — **МИР/СБП** (он в РФ → платит сам); зарубежная/белорусская карта не нужна и не принимается.
 - Объёмные скидки — только на бизнес-тарифе по запросу.
 
+## Прогноз стоимости/мес для Олега (Sonnet 4.6, с кэшем)
+
+⚠️ Сильно зависит от интенсивности (особенно ресёрча с сабагентами). Ориентиры — мерить на реальном usage.
+
+| Профиль | Что делает | ₽/мес | ~$/мес |
+|---|---|---|---|
+| Лёгкий | чат, заметки, контекст-дампы, простые вопросы | 1 000–3 000 | ~12–35 |
+| **Средний (вероятный для Олега)** | регулярно + иногда ресёрч | **3 000–7 000** | **~35–80** |
+| Тяжёлый | частый глубокий ресёрч с несколькими сабагентами (как сессии 2026-06-21) | 8 000–15 000+ | ~90–170+ |
+
+- **Интуиция по юнитам:** 1M output Sonnet = 2880₽ ≈ ~350 содержательных ответов агента. Один глубокий
+  ресёрч-вопрос (синтез + сабагенты) = десятки–сотни ₽ за раз — **это и есть главный драйвер**.
+- **Драйвер вверх:** ресёрч/сабагенты. **Вниз:** кэш (авто −90% на повторном контексте), Sonnet вместо Opus,
+  Haiku для сабагентов, лёгкий контекст.
+- **Старт:** пополнить 399₽, снять реальный расход за 1–2 недели, экстраполировать.
+
 ## Источники
 
 [prompt-caching](https://docs.aitunnel.ru/features/prompt-caching) · [Messages API](https://docs.aitunnel.ru/api/messages) · [Claude Code integration](https://docs.aitunnel.ru/guides/claude-code-integration) · [Sonnet 4.6](https://aitunnel.ru/models/claude-sonnet-4-6) · [Opus 4.8](https://aitunnel.ru/models/claude-opus-4-8) · [Haiku 4.5](https://aitunnel.ru/models/claude-haiku-4-5) · [оплата в РФ](https://aitunnel.ru/guide/kak-oplatit-openai-api-v-rossii) · [обзор toolfox 2026-05-16](https://toolfox.ru/services/s/aitunnel) · [Anthropic prompt-caching](https://docs.anthropic.com/en/docs/build-with-claude/prompt-caching)
