@@ -7,7 +7,8 @@
 ## События
 
 ```
-2026-06-25 | task | rozhkov | YouGile: REB-82 (Олег — VPN Amnezia+Вездеход) и REB-83 (Свят — прослушать 3 звукарей + Babybear), дедлайн 2026-06-29 |
+2026-06-25 | task | rozhkov | YouGile: выровнял заголовки [REB-NN] под нативные бейджи по всей доске reboot (6 правок) |
+2026-06-25 | task | rozhkov | YouGile: REB-84 (Олег — VPN Amnezia+Вездеход), REB-85 (Свят — звукари+Babybear), REB-86 (Свят — демку «Это другое» со 2-го ноута), дедлайн 2026-06-29 |
 2026-06-25 | note | rozhkov | VPN для Олега: не нужен для AITunnel, лишь страховка сетапа → howto/oleg-claude-code-setup (Proton/Nord/Amnezia) |
 2026-06-21 | adr  | rozhkov | ADR 0005 — путь A: остаёмся на Claude-хуках + git-страховка (не агностик-ребилд) |
 2026-06-21 | note | rozhkov | финал ADR 0003: Claude Code через AITunnel (хуки/MCP сохраняются), гайд для Олега |
