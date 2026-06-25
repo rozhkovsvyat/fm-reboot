@@ -7,6 +7,7 @@
 ## События
 
 ```
+2026-06-25 | note | rozhkov | VPN для Олега: не нужен для AITunnel, лишь страховка сетапа → howto/oleg-claude-code-setup (Proton/Nord/Amnezia) |
 2026-06-21 | adr  | rozhkov | ADR 0005 — путь A: остаёмся на Claude-хуках + git-страховка (не агностик-ребилд) |
 2026-06-21 | note | rozhkov | финал ADR 0003: Claude Code через AITunnel (хуки/MCP сохраняются), гайд для Олега |
 2026-06-21 | adr  | rozhkov | ADR 0003 — РФ-доступ к ИИ: агент через агрегатор (не прямой Claude Pro) |
